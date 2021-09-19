@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ name }} - Curriculum Vitae</title>
+
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="description" content="The Curriculum Vitae of {{ name }}."/>
+    <meta charset="UTF-8">
+
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body id="top">
+<div id="cv" class="instaFade">
+
+    <div class="mainDetails">
+        <div id="headshot" class="quickFade">
+            <img src="{{ headshot }}" alt="{{ name }}" />
+        </div>
+
+        <div id="name">
+            <h1 class="quickFade delayTwo">{{ name }}</h1>
+            <h2 class="quickFade delayThree">{{ job_title }}</h2>
+            <p class="quickFade delayThree">{{ quote }}</p>
+        </div>
+
+        <div id="contactDetails" class="quickFade delayFour">
+            <ul>
+                {% for k, v in contact_info.items() -%}
+                {% if k.startswith('_href_') %}{% else %}<li>{{ k }}: {%
+                    if '_href_' + k in contact_info %}<a href="{{ contact_info['_href_' + k] }}" target="_blank">{% endif
+                %}{{ v }}{%
+                    if '_href_' + k in contact_info %}</a>{% endif
+                %}</li>
+                {% endif %}{% endfor %}
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="credits">
+        This Resume was generated using a Python-based <a href="https://github.com/sandorkazi/pysume">Resume-templating structure</a> by Sandor Kazi.
+    </div>
+
+    <div id="mainArea" class="quickFade delayFive">
+
+        {{ sections }}
+
+    </div>
+
+</div>
+{{ footer }}
+</body>
+</html>

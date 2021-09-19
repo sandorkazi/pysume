@@ -1,0 +1,26 @@
+[project]
+name = "pysume"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Sandor Kazi", email = "sandor.kazi@gmail.com"},
+]
+dependencies = [
+    "numpy~=1.21",
+    "jinja2~=3.0",
+    "pyyaml~=5.4",
+    "click~=8.0",
+]
+requires-python = ">=3.9"
+dynamic = ["classifiers"]
+license = {text = "MIT"}
+
+[project.urls]
+homepage = ""
+
+[build-system]
+requires = ["pdm-pep517"]
+build-backend = "pdm.pep517.api"
+
+[tool]
+[tool.pdm]

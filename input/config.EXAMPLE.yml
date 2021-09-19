@@ -1,0 +1,134 @@
+---
+
+headshot: headshot.EXAMPLE.jpg
+name: Sandor Kazi
+job_title: Senior Data Engineer
+quote: Sometimes teaching, always learning
+contact_info:
+  e-mail: something.something@nothost.ing
+  _href_e-mail: mailto:something.something@nothost.ing
+  phone: 555 2467
+  linkedin: sandorkazi
+  _href_linkedin: https://www.linkedin.com/in/sandorkazi/
+  skype: howisthatthatthereisnoavailablename
+  _href_skype: skype:howisthatthatthereisnoavailablename?call
+sections:
+  - title: Personal Profile
+    contents: |
+      I'm an engineer with computer science, data and machine learning background. Having experience with operations, demonstrations and consultation in various settings.
+      I'm also a people person: meeting new people, mentoring, organising things are great. I truly believe disputes (kept civil) can lead to good things.
+  - title: Professional skills and competences
+    contents:
+      - title: Computer Science and Engineering
+        contents: |
+          - 10+ years of <b>Python</b>
+          - software development practices and tools
+          - <b>data architect</b>, data infrastructure design
+          - <b>algorithms</b> and data structures
+          - <b>machine learning</b> methods and processes
+          - multiple <b>cloud providers</b> and distributed computation tooling
+          - designing for low operations costs
+      - title: Service Operations
+        contents: |
+          - providing ops support to complex systems
+          - operations support for systems without direct access
+          - designing ops processes and runbooks
+          - leading ops effort
+          - ops rigor to support live systems
+      - title: Data tools
+        contents: |
+          - Mass data processing toolsets and ETL (Spark, Hadoop/MapReduce, Flink, Logstash, Kafka, etc)
+          - NoSQL databases (Cassandra, HBase, Druid, etc)
+          - SQL Databases (Oracle, Postgres, Microsoft), their internals, and related ETL toolsets
+          - Distributed SQL (Impala, Drill, etc)
+          - Search databases (Elastic, SolR, etc)
+          - Visualisation/BI tools (Superset, PowerBI, Kibana, etc)
+          - Schedulers (Airflow, etc)
+          - Methodologies (CRISP-DM, SEMMA, etc)
+      - title: Other Tools and Service Operations
+        contents: |
+          - Versioning: git, git-flow, gitlab
+          - Infrastructure automation (Terraform, Kubernetes, Ansible, Vagrant)
+          - Multiple linux distributions and basic knowledge of some other platforms
+      - title: Teaching and demonstration
+        contents: |
+          - Close to 10 years of teaching experience
+          - Small and large audiences, technical and non-technical people
+          - Condensing complex information into consumable structure
+      - title: Social and language skills
+        contents: |
+          - Fluent in English, can easily understand multiple dialects
+          - Leading team effort, planning project scope
+          - Running scrum and project planning in various roles
+          - Working remotely since 2018
+          - Mentoring (both in a university setting and corporate, more than a 100 people)
+          - Experience with organization of events of up to a thousand people
+  - title: Education
+    contents:
+      - title: Postgraduate studies @ University of Technology and Economics of Budapest
+        subtitle: 2012-2015
+        contents: |
+          - Computer Science & Engineering PhD school
+          - *R&D, Machine Learning*
+      - title: MSc @ University of Technology and Economics of Budapest
+        subtitle: 2009-2012
+        contents: |
+          - Computer Engineering
+          - Summa cum laude
+          - Minor: Machine Learning & Algorithms
+  - title: Work History
+    contents:
+      - title: Oracle Cloud - Security Products (ML)
+        subtitle: 2018-today
+        contents: |
+          - System design and development, automation, integration
+          - Platform/service co-owner
+          - Network security use-cases
+          - System design and development, automation, integration
+          - Data science PoCs
+          - Data science deployment processes
+          - "One-button" environments for customers
+      - title: Freelance projects
+        subtitle: 2016-2018
+        contents: |
+          - Data scientist, data architect, data environment devops engineer
+          - Lead data architect for hire (several projects, various customers)
+          - Providing ops and architecture design for various customers
+          - Subject matter expert on "big data" topics in three companies
+          - Telecommunications companies, banking, etc.
+      - title: Dmlab
+        subtitle: 2012-2016
+        contents: |
+          - Data scientist
+          - Data architect
+          - Lecturer, consultant, researcher
+          - Working with various big data tools
+      - title: T-Systems (IQSYS)
+        subtitle: 2010-2012
+        contents: |
+          - Database developer
+          - System integration
+  - title: Teaching
+    contents:
+      - title: Budapest University of Technology and Economics
+        subtitle: 2010-2018
+        contents: |
+          - Lecturer and demonstrator on more than 10 topics
+          - Researcher
+      - title: Oracle University
+        subtitle: 2016-2018
+        contents: |
+          - Lecturer on various "big data" and NoSQL topics
+footer: |
+  <!-- No real footer in this example... but one can put tracking code here for example... -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-????????-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-????????-1');
+  </script>
+
+...
