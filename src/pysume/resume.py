@@ -35,7 +35,7 @@ class Resume:
                 rendered = Template(fin.read()).render(**self._config)
                 fout.write(rendered)
 
-    def render_contents(self, contents: Union[str, Collection]) -> str:
+    def render_contents(self, contents: Union[str, Collection[str], Collection[Collection[str]]]) -> str:
         if isinstance(contents, str):
             return Template(
                 """
@@ -67,7 +67,7 @@ class Resume:
             raise ValueError("Each item in `sections` with lists as contents should either list strings or dicts.")
         raise ValueError("Each item in `sections` should either be strings or lists.")
 
-    def render_section(self, section: Dict) -> str:
+    def render_section(self, section: Dict[str, str]) -> str:
         contents = section.get("contents", "")
         contents = self.render_contents(contents)
         section["contents"] = contents
@@ -87,7 +87,7 @@ class Resume:
             **section,
         )
 
-    def render(self, format_name: str):
+    def render(self, format_name: str) -> None:
         static_in = PurePath(static.__file__).parent / format_name
         src_root = PurePath(template.__file__).parent / format_name
         dest_root = self._output_path / format_name
@@ -112,14 +112,14 @@ class Resume:
 
 
 if __name__ == "__main__":
-    import click  # type: ignore
+    import click  # noqa
 
     @click.command()
     @click.argument("input_path")
     @click.argument("output_path")
     @click.option("-c", "--config_file", default=DEFAULT_CONFIG_FILE)
     @click.option("-f", "--format_name", default=DEFAULT_FORMAT_NAME)
-    def main(input_path: str, output_path: str, config_file: str, format_name: str):
+    def main(input_path: str, output_path: str, config_file: str, format_name: str) -> None:
         Resume(
             input_path=PurePath(input_path),
             config_file=config_file,

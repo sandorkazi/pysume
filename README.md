@@ -4,7 +4,7 @@ A Python based resume generator from YAML to HTML... I just got bored of managin
 
 Print it to pdf if you want to... do replace my work history though. ;)
 
-Running `make all` in the project root generates all supported formats of the Resume in the output folder. Based on the
+Running `tox` in the project root generates all supported formats of the Resume in the output folder. Based on the
 things specified in the input folder.
 
 Sidenote: I was contemplating naming this OpenCV but that was already taken... :D
