@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@gitgraph/react": "^1.6.0"
+  }
+}
